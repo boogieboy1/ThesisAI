@@ -33,7 +33,7 @@ public class Main {
         
          
         try {
-        	logger.info("START !!");
+        	logger.info("START2 !!");
         	System.out.println("START !!");
             //con = new Driver().connect(jdbcUrl, null);
             //Statement stmt = con.createStatement();
