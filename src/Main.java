@@ -1,33 +1,16 @@
-import java.sql.Connection;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Properties;
 
-
-import ca.pfv.spmf.input.sequence_database_list_integers.SequenceDatabase;
- 
-
-
-
-
-import maxSequentialPatterns.AlgoBIDEPlus;
-
 import org.apache.drill.exec.ExecConstants;
-import org.apache.drill.jdbc.Driver;
+import org.slf4j.LoggerFactory;
+import org.slf4j.Logger;
 
-import continousSequencePattern.ContinuousSequenceAlgo;
 import dataTransform.DataReader;
-import dataTransform.DataUtil;
-import fpgrowth.AlgoFPGrowth;
-import sequentialPatterns.PrefixSpanAlgorithm;
-import frequentItemsets.Apriori;
-import frequentItemsets.AprioriAlgorithm;
-import fsMiner.FSMiner;
  
 public class Main {
+	
+	private static final Logger logger = LoggerFactory.getLogger(Main.class);
  
     public static void main(String[] args) {
         try {
@@ -50,6 +33,7 @@ public class Main {
         
          
         try {
+        	logger.info("START !!");
         	System.out.println("START !!");
             //con = new Driver().connect(jdbcUrl, null);
             //Statement stmt = con.createStatement();
